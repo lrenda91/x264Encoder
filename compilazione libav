@@ -1,0 +1,24 @@
+QUESTO HA FUNZIONATO!!!!
+
+./configure \
+	--target-os=linux \
+	--arch=armv7a \
+	--enable-cross-compile \
+	--cc=/home/luigi/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc \
+	--cross-prefix=/home/luigi/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi- \
+	--nm=/home/luigi/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-nm \
+	--sysroot=/home/luigi/Android/Sdk/ndk-bundle/platforms/android-9/arch-arm/ \
+	--sysinclude=/home/luigi/Android/Sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include
+	
+	
+./configure \
+	--target-os=linux \
+	--arch=armv7a \
+	--enable-cross-compile \
+	--cc=/home/luigi/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc \
+	--cross-prefix=/home/luigi/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi- \
+	--nm=/home/luigi/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-nm \
+	--sysroot=/home/luigi/Android/Sdk/ndk-bundle/platforms/android-15/arch-arm/ \
+	--sysinclude=/home/luigi/Android/Sdk/ndk-bundle/platforms/android-15/arch-arm/usr/include
+
+make
