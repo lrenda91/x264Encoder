@@ -1,0 +1,46 @@
+Compilazione x264
+
+1) scarica x264
+	git clone git://git.videolan.org/x264.git	
+	
+2) cd ./x264
+
+./configure riconosce l'architettura su cui lo si lancia (in pratica x86/x86_64)
+Se si ha bisogno di testare la libreria sul PC basta
+	./configure
+	make	
+
+3) Scaricare NDK (da AndroidStudio su ProjectStructure -> SDK Location -> Android NDK location).
+	Tipicamente si scarica in ~/Android/Sdk/ndk-bundle
+
+3) 	compilazione ARM (testato su diversi device Android)
+	definire ANDROID_NDK sul path di installazione di NDK e compilare
+	export ANDROID_NDK=~/Android/Sdk/ndk-bundle
+	./configure \
+		--host=arm-linux \
+		--enable-static \
+		--disable-asm \
+		--enable-pic \
+		--cross-prefix=$ANDROID_NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi- \
+		--sysroot=$ANDROID_NDK/platforms/android-9/arch-arm/ 
+	make
+	
+
+Per altre architetture:
+MIPS
+	./configure \
+		--disable-asm \
+		--enable-static \
+		--host=mips-linux \
+		--enable-pic \
+		--cross-prefix=$ANDROID_NDK/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/bin/mipsel-linux-android- \
+		--sysroot=$ANDROID_NDK/platforms/android-9/arch-mips/
+	
+x86_64
+	./configure \
+		--disable-asm \
+		--enable-static \
+		--host=mips-linux \
+		--enable-pic \
+		--cross-prefix=$ANDROID_NDK/toolchains/x86_64-4.9/prebuilt/linux-x86_64/bin/x86_64-linux-android- \
+		--sysroot=$ANDROID_NDK/platforms/android-9/arch-x86/

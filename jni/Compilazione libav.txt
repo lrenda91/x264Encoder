@@ -1,0 +1,66 @@
+QUESTO HA FUNZIONATO!!!!
+
+./configure \
+	--target-os=linux \
+	--arch=armv7a \
+	--enable-cross-compile \
+	--cc=/home/luigi/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc \
+	--cross-prefix=/home/luigi/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi- \
+	--nm=/home/luigi/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-nm \
+	--sysroot=/home/luigi/Android/Sdk/ndk-bundle/platforms/android-9/arch-arm/ \
+	--sysinclude=/home/luigi/Android/Sdk/ndk-bundle/platforms/android-9/arch-arm/usr/include
+	
+	
+./configure \
+	--target-os=linux \
+	--arch=armv7a \
+	--enable-cross-compile \
+	--cc=/home/luigi/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc \
+	--cross-prefix=/home/luigi/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi- \
+	--nm=/home/luigi/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-nm \
+	--sysroot=/home/luigi/Android/Sdk/ndk-bundle/platforms/android-15/arch-arm/ \
+	--sysinclude=/home/luigi/Android/Sdk/ndk-bundle/platforms/android-15/arch-arm/usr/include
+
+make
+
+
+
+in Anrdroid.mk
+
+LOCAL_MODULE    := libavfilter-prebuilt
+LOCAL_SRC_FILES := libav-11.6/libavfilter/libavfilter.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+LOCAL_MODULE    := libswscale-prebuilt
+LOCAL_SRC_FILES := libav-11.6/libswscale/libswscale.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+LOCAL_MODULE    := libavresample-prebuilt
+LOCAL_SRC_FILES := libav-11.6/libavresample/libavresample.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+LOCAL_MODULE    := libavdevice-prebuilt
+LOCAL_SRC_FILES := libav-11.6/libavdevice/libavdevice.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+LOCAL_MODULE    := libavcodec-prebuilt
+LOCAL_SRC_FILES := libav-11.6/libavcodec/libavcodec.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+LOCAL_MODULE    := libavutil-prebuilt
+LOCAL_SRC_FILES := libav-11.6/libavutil/libavutil.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+LOCAL_MODULE    := libavformat-prebuilt
+LOCAL_SRC_FILES := libav-11.6/libavformat/libavformat.a
+include $(PREBUILT_STATIC_LIBRARY)
+
+
+
+LOCAL_STATIC_LIBRARIES += 	libavcodec-prebuilt \
+							libavutil-prebuilt \
+							libavfilter-prebuilt \
+							libavformat-prebuilt \
+							libavdevice-prebuilt \
+							libswscale-prebuilt \
+							libavresample-prebuilt
