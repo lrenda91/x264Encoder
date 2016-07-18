@@ -6,7 +6,7 @@ include $(CLEAR_VARS)
 # building static prebuilt libraries
 ##########################################################
 LOCAL_MODULE    := x264-prebuilt
-LOCAL_SRC_FILES := x264/libx264.a
+LOCAL_SRC_FILES := $(TARGET_ARCH_ABI)/libx264.a
 include $(PREBUILT_STATIC_LIBRARY)
 
 ##########################################################

@@ -1,4 +1,4 @@
-/home/luigi/Desktop/x264EncoderALL/obj/local/armeabi/objs/MediaEncoder/jni_main.o: \
+/home/luigi/Desktop/x264EncoderALL/obj/local/mips/objs/MediaEncoder/jni_main.o: \
  /home/luigi/Desktop/x264EncoderALL/jni/jni_main.cpp \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/string.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stdio.h \

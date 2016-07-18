@@ -14,33 +14,28 @@ X264_Encoder *encoder = NULL;
 extern "C" {
 #endif
 
-JNIEXPORT jstring Java_it_polito_mad_streamsender_encoding_StreamSenderJNI_hello(JNIEnv* env, jobject javaThis){
+JNIEXPORT jstring Java_it_polito_mec_video_raven_sender_encoding_StreamSenderJNI_hello(JNIEnv* env, jobject javaThis){
     jstring result;
-    const char msg[60] = "ciaociaoaaaaaaaaaaaaaaaa";
-    LOGD("%s",msg);
+    const char msg[60] = "HELLO from JNI";
     result = env->NewStringUTF(msg);
     return result;
 }
 
 
-JNIEXPORT void Java_it_polito_mad_streamsender_encoding_StreamSenderJNI_nativeInitEncoder(JNIEnv* env, jobject thiz
-        //, const jint width, const jint height
-    ){
-    //init_encoder(width, height);
+JNIEXPORT void Java_it_polito_mec_video_raven_sender_encoding_StreamSenderJNI_nativeInitEncoder(JNIEnv* env, jobject thiz){
     encoder = new X264_Encoder();
 }
 
-JNIEXPORT void Java_it_polito_mad_streamsender_encoding_StreamSenderJNI_nativeReleaseEncoder(JNIEnv* env, jobject thiz){
-    //release_encoder();
+JNIEXPORT void Java_it_polito_mec_video_raven_sender_encoding_StreamSenderJNI_nativeReleaseEncoder(JNIEnv* env, jobject thiz){
     delete encoder;
 }
 
-JNIEXPORT jboolean Java_it_polito_mad_streamsender_encoding_StreamSenderJNI_nativeApplyParams(JNIEnv* env, jobject thiz,
+JNIEXPORT jboolean Java_it_polito_mec_video_raven_sender_encoding_StreamSenderJNI_nativeApplyParams(JNIEnv* env, jobject thiz,
         const jint width, const jint height, const jint bitrateKbps){
     return (jboolean) encoder->applyParams(width, height, bitrateKbps);
 }
 
-JNIEXPORT jbyteArray Java_it_polito_mad_streamsender_encoding_StreamSenderJNI_nativeDoEncode(JNIEnv* env, jobject thiz,
+JNIEXPORT jbyteArray Java_it_polito_mec_video_raven_sender_encoding_StreamSenderJNI_nativeDoEncode(JNIEnv* env, jobject thiz,
         const jint width, const jint height, jbyteArray _yuv, const jint bitrate){
     //jboolean isCopy = JNI_TRUE;
     jbyte *yuvData = env->GetByteArrayElements(_yuv, NULL);
@@ -76,7 +71,7 @@ JNIEXPORT jbyteArray Java_it_polito_mad_streamsender_encoding_StreamSenderJNI_na
     return result;
 }
 
-JNIEXPORT jobjectArray Java_it_polito_mad_streamsender_encoding_StreamSenderJNI_nativeGetHeaders(JNIEnv* env, jobject thiz){
+JNIEXPORT jobjectArray Java_it_polito_mec_video_raven_sender_encoding_StreamSenderJNI_nativeGetHeaders(JNIEnv* env, jobject thiz){
     uint8_t *sps = NULL, *pps = NULL;
     size_t sps_size = 0, pps_size = 0;
     encoder->getConfigBytes(&sps, &sps_size, &pps, &pps_size);
@@ -94,45 +89,6 @@ JNIEXPORT jobjectArray Java_it_polito_mad_streamsender_encoding_StreamSenderJNI_
     env->SetObjectArrayElement(result, 1, jni_PPS);
     return result;
 }
-
-/*
-static struct sigaction old_sa[NSIG];
-static jmethodID nativeCrashed;
-static JNIEnv *env;
-static jclass cls;
-
-void android_sigaction(int signal, siginfo_t *info, void *reserved){
-    LOGE("ERROR!!!!!");
-    char *msg = NULL;
-    if (info && info->si_errno){
-        msg = strerror(info->si_errno);
-    }
-    LOGE("ERROR!!!!!");
-	env->CallStaticVoidMethod(cls, nativeCrashed, msg);
-	old_sa[signal].sa_handler(signal);
-}
-
-JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *jvm, void *reserved){
-    if (jvm->GetEnv((void **)&env, JNI_VERSION_1_2)) return JNI_ERR;
-    cls = env->FindClass("it/polito/mad/streamsender/encoding/StreamSenderJNI");
-    nativeCrashed = env->GetStaticMethodID(cls, "nativeCrashed", "(Ljava/lang/String;)V");
-    struct sigaction handler;
-	memset(&handler, 0, sizeof(struct sigaction));
-	handler.sa_sigaction = android_sigaction;
-	handler.sa_flags = SA_RESETHAND | SA_SIGINFO;
-#define CATCHSIG(X) sigaction(X, &handler, &old_sa[X])
-	CATCHSIG(SIGILL);
-	CATCHSIG(SIGABRT);
-	CATCHSIG(SIGBUS);
-	CATCHSIG(SIGFPE);
-	CATCHSIG(SIGSEGV);
-	CATCHSIG(SIGSTKFLT);
-	CATCHSIG(SIGPIPE);
-
-    LOGD("Loaded jni");
-	return JNI_VERSION_1_2;
-}
-*/
 
 #ifdef __cplusplus
 }

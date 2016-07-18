@@ -1,5 +1,5 @@
-/home/luigi/Desktop/x264Encoder/obj/local/armeabi/objs/MediaEncoder/coffeecatch/coffeejni.o: \
- /home/luigi/Desktop/x264Encoder/jni/coffeecatch/coffeejni.c \
+/home/luigi/Desktop/x264EncoderALL/obj/local/armeabi/objs/MediaEncoder/coffeecatch/coffeejni.o: \
+ /home/luigi/Desktop/x264EncoderALL/jni/coffeecatch/coffeejni.c \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stdio.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/_cprolog.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/config/features.h \
@@ -16,7 +16,7 @@
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/_config_compat_post.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/string.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/assert.h \
- /home/luigi/Desktop/x264Encoder/jni/coffeecatch/coffeecatch.h \
+ /home/luigi/Desktop/x264EncoderALL/jni/coffeecatch/coffeecatch.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/setjmp.h
 
 /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stdio.h:
@@ -51,6 +51,6 @@
 
 /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/assert.h:
 
-/home/luigi/Desktop/x264Encoder/jni/coffeecatch/coffeecatch.h:
+/home/luigi/Desktop/x264EncoderALL/jni/coffeecatch/coffeecatch.h:
 
 /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/setjmp.h:

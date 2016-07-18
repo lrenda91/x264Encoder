@@ -1,5 +1,5 @@
-/home/luigi/Desktop/x264Encoder/obj/local/armeabi/objs/MediaEncoder/ENC_CPP/enc.o: \
- /home/luigi/Desktop/x264Encoder/jni/ENC_CPP/enc.cpp \
+/home/luigi/Desktop/x264EncoderALL/obj/local/x86/objs/MediaEncoder/encoder/X264_Encoder.o: \
+ /home/luigi/Desktop/x264EncoderALL/jni/encoder/X264_Encoder.cpp \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/string.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/_cprolog.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/config/features.h \
@@ -15,10 +15,10 @@
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/_epilog.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/_config_compat_post.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stdio.h \
- /home/luigi/Desktop/x264Encoder/jni/helper.h \
- /home/luigi/Desktop/x264Encoder/jni/ENC_CPP/X264_Encoder.hpp \
- /home/luigi/Desktop/x264Encoder/jni/x264/x264.h \
- /home/luigi/Desktop/x264Encoder/jni/x264/x264_config.h
+ /home/luigi/Desktop/x264EncoderALL/jni/helper.h \
+ /home/luigi/Desktop/x264EncoderALL/jni/encoder/X264_Encoder.hpp \
+ /home/luigi/Desktop/x264EncoderALL/jni/x264/x264.h \
+ /home/luigi/Desktop/x264EncoderALL/jni/x264/x264_config.h
 
 /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/string.h:
 
@@ -50,10 +50,10 @@
 
 /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stdio.h:
 
-/home/luigi/Desktop/x264Encoder/jni/helper.h:
+/home/luigi/Desktop/x264EncoderALL/jni/helper.h:
 
-/home/luigi/Desktop/x264Encoder/jni/ENC_CPP/X264_Encoder.hpp:
+/home/luigi/Desktop/x264EncoderALL/jni/encoder/X264_Encoder.hpp:
 
-/home/luigi/Desktop/x264Encoder/jni/x264/x264.h:
+/home/luigi/Desktop/x264EncoderALL/jni/x264/x264.h:
 
-/home/luigi/Desktop/x264Encoder/jni/x264/x264_config.h:
+/home/luigi/Desktop/x264EncoderALL/jni/x264/x264_config.h:

@@ -36,11 +36,20 @@ MIPS
 		--cross-prefix=$ANDROID_NDK/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/bin/mipsel-linux-android- \
 		--sysroot=$ANDROID_NDK/platforms/android-9/arch-mips/
 	
+x86		
+	./configure \
+		--host=i686-linux \
+		--enable-static \
+		--disable-asm \
+		--enable-pic \
+		--cross-prefix=$ANDROID_NDK/toolchains/x86-4.9/prebuilt/linux-x86_64/bin/i686-linux-android- \
+		--sysroot=$ANDROID_NDK/platforms/android-9/arch-x86/
+		
 x86_64
 	./configure \
 		--disable-asm \
 		--enable-static \
-		--host=mips-linux \
+		--host=x86_64-linux \
 		--enable-pic \
 		--cross-prefix=$ANDROID_NDK/toolchains/x86_64-4.9/prebuilt/linux-x86_64/bin/x86_64-linux-android- \
-		--sysroot=$ANDROID_NDK/platforms/android-9/arch-x86/
+		--sysroot=$ANDROID_NDK/platforms/android-21/arch-x86_64/

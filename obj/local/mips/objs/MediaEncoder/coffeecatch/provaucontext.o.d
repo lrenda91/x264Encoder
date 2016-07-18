@@ -1,6 +1,7 @@
-/home/luigi/Desktop/x264Encoder/obj/local/armeabi/objs/MediaEncoder/ENC_CPP/X264_Encoder.o: \
- /home/luigi/Desktop/x264Encoder/jni/ENC_CPP/X264_Encoder.cpp \
- /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/string.h \
+/home/luigi/Desktop/x264EncoderALL/obj/local/mips/objs/MediaEncoder/coffeecatch/provaucontext.o: \
+ /home/luigi/Desktop/x264EncoderALL/jni/coffeecatch/provaucontext.c \
+ /home/luigi/Desktop/x264EncoderALL/jni/coffeecatch/ucontext.h \
+ /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/signal.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/_cprolog.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/config/features.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/_stlport_version.h \
@@ -15,12 +16,17 @@
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/_epilog.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/_config_compat_post.h \
  /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stdio.h \
- /home/luigi/Desktop/x264Encoder/jni/helper.h \
- /home/luigi/Desktop/x264Encoder/jni/ENC_CPP/X264_Encoder.hpp \
- /home/luigi/Desktop/x264Encoder/jni/x264/x264.h \
- /home/luigi/Desktop/x264Encoder/jni/x264/x264_config.h
+ /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stdlib.h \
+ /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/errno.h \
+ /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/assert.h \
+ /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/setjmp.h \
+ /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/pthread.h \
+ /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/_prolog.h \
+ /home/luigi/Desktop/x264EncoderALL/jni/coffeecatch/coffeecatch.h
 
-/home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/string.h:
+/home/luigi/Desktop/x264EncoderALL/jni/coffeecatch/ucontext.h:
+
+/home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/signal.h:
 
 /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/_cprolog.h:
 
@@ -50,10 +56,16 @@
 
 /home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stdio.h:
 
-/home/luigi/Desktop/x264Encoder/jni/helper.h:
+/home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stdlib.h:
 
-/home/luigi/Desktop/x264Encoder/jni/ENC_CPP/X264_Encoder.hpp:
+/home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/errno.h:
 
-/home/luigi/Desktop/x264Encoder/jni/x264/x264.h:
+/home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/assert.h:
 
-/home/luigi/Desktop/x264Encoder/jni/x264/x264_config.h:
+/home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/setjmp.h:
+
+/home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/pthread.h:
+
+/home/luigi/Android/Sdk/ndk-bundle/sources/cxx-stl/stlport/stlport/stl/_prolog.h:
+
+/home/luigi/Desktop/x264EncoderALL/jni/coffeecatch/coffeecatch.h:
